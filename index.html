@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app='store'>
+ <head>
+ 	<link rel="stylesheet" type="text/css" href="bower_components\bootstrap\dist\css\bootstrap.min.css" />
+ </head>
+ <body ng-controller='StoreController as store'>
+ 	<div ng-repeat='products in store.product'>
+ 			<h1>nom : {{products.name}}</h1>
+ 			<h2>prix : {{products.price}}</h2>
+ 			<p>description : {{products.description}}</p>
+ 			<button ng-show="store.product.disponible">Ajouter au panier</button> 			
+ 	</div>	
+  	<script type="text/javascript" src="bower_components\angular\angular.min.js"></script>
+	<script type="text/javascript" src="js\app.js"></script>
+ </body>
+</html>
